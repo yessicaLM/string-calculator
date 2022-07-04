@@ -1,13 +1,20 @@
 const isStringValue = (value: string | number): boolean => typeof value === 'string';
 
-const listSeparator = (strinOfNumbers: string): string => strinOfNumbers.includes(',')
-  ? ','
-  : strinOfNumbers[2];
+const listSeparator = (stringOfNumbers: string): string => {
+  const DEFAULT_SEPARATOR = ',';
+  return stringOfNumbers.includes(DEFAULT_SEPARATOR)
+    ? DEFAULT_SEPARATOR
+    : stringOfNumbers[2];
+}
+
+const removeNonNumericValues = (value: string): string => {
+  const NON_NUMERIC_VALUES = /[^\d.-]/g;
+  return value.replace(NON_NUMERIC_VALUES, '');
+}
 
 const sumValues = (numbers: string): number => {
   const listOfNumbers = numbers.split(listSeparator(numbers));
-  const nonNumericValues = /[^\d.-]/g;
-  const filteredNumbers = listOfNumbers.map(number => number.replace(nonNumericValues, ''));
+  const filteredNumbers = listOfNumbers.map(number => removeNonNumericValues(number));
   return filteredNumbers.reduce((numA, numB) => Number(numA) + Number(numB), 0);
 }
 

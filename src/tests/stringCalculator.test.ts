@@ -40,7 +40,6 @@ describe('String calculator', () => {
 
   it('accepts customized sequences: "//%/2%2" returns 4', () => {
     const currentValue = '//%/2%2';
-
     const expectedResult = 4;
 
     expect(stringCalculator(currentValue)).toBe(expectedResult);
