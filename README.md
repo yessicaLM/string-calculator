@@ -16,7 +16,7 @@ String Calculator implements a function that sums all the numeric elements of a 
 - **'//%/2%2'** -> 4
 
 ## Run project
-Install project depencencies:
+Install project dependencies:
 
 `
 npm install
