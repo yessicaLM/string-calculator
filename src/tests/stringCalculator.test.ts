@@ -4,8 +4,7 @@ import { stringCalculator } from '../core/stringCalculator';
 // '' -> 0 --> DONE
 // '2' -> 2 --> DONE
 // 2,2 -> 4 --> DONE
-// 2,2,a -> 4
-// n,n -> 0
+// 2,2,a -> 4 --> DONE
 // //%/2%2 -> 4
 
 
@@ -28,5 +27,9 @@ describe('String calculator', () => {
 
   it('given string "2,2,a" returns 4', () => {
     expect(stringCalculator('2,2,a')).toBe(4);
+  });
+
+  it('given string "2,2a" returns 4', () => {
+    expect(stringCalculator('2,2a')).toBe(4);
   });
 });
