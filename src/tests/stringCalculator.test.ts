@@ -32,4 +32,8 @@ describe('String calculator', () => {
   it('given string "2,2a" returns 4', () => {
     expect(stringCalculator('2,2a')).toBe(4);
   });
+
+  it('accepts customized sequesnces: "//%/2%2" returns 4', () => {
+    expect(stringCalculator('//%/2%2')).toBe(4);
+  });
 });
