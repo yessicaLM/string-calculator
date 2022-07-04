@@ -1,39 +1,47 @@
 import { stringCalculator } from '../core/stringCalculator';
 
-// null -> 0 --> DONE
-// '' -> 0 --> DONE
-// '2' -> 2 --> DONE
-// 2,2 -> 4 --> DONE
-// 2,2,a -> 4 --> DONE
-// //%/2%2 -> 4
-
-
 describe('String calculator', () => {
-  it('empty string returns 0', () => {
-    expect(stringCalculator('')).toBe(0);
-  });
+  it('empty string and null value returns 0', () => {
+    const emptyString = '';
+    const nullValue = null;
+    const expectedResult = 0;
 
-  it('given null returns 0', () => {
-    expect(stringCalculator(null)).toBe(0);
+    expect(stringCalculator(emptyString)).toBe(expectedResult);
+    expect(stringCalculator(nullValue)).toBe(expectedResult);
   });
 
   it('given string of 2 returns number 2', () => {
-    expect(stringCalculator('2')).toBe(2);
+    const currentValue = '2';
+    const expectedResult = 2;
+
+    expect(stringCalculator(currentValue)).toBe(expectedResult);
   });
 
   it('given string "2,2" returns 4', () => {
-    expect(stringCalculator('2,2')).toBe(4);
+    const currentValue = '2,2';
+    const expectedResult = 4;
+
+    expect(stringCalculator(currentValue)).toBe(expectedResult);
   });
 
   it('given string "2,2,a" returns 4', () => {
-    expect(stringCalculator('2,2,a')).toBe(4);
+    const currentValue = '2,2,a';
+    const expectedResult = 4;
+
+    expect(stringCalculator(currentValue)).toBe(expectedResult);
   });
 
   it('given string "2,2a" returns 4', () => {
-    expect(stringCalculator('2,2a')).toBe(4);
+    const currentValue = '2,2a';
+    const expectedResult = 4;
+
+    expect(stringCalculator(currentValue)).toBe(expectedResult);
   });
 
   it('accepts customized sequesnces: "//%/2%2" returns 4', () => {
-    expect(stringCalculator('//%/2%2')).toBe(4);
+    const currentValue = '//%/2%2';
+    const expectedResult = 4;
+
+    expect(stringCalculator(currentValue)).toBe(expectedResult);
   });
 });
