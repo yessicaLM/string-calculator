@@ -13,4 +13,8 @@ describe('String calculator', () => {
   it('empty string returns 0', () => {
     expect(stringCalculator('')).toBe(0);
   });
+
+  it('given null returns 0', () => {
+    expect(stringCalculator(null)).toBe(0);
+  });
 });
