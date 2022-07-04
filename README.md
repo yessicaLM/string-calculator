@@ -1,6 +1,29 @@
-# Base template only with TypeScript
-You can use it for Coding-Dojos, Katas or reference to build a new project.
+# Code Kata: String Calculator
 
-This template includes:
 
-💬 TypeScript 4.0.5
+## Description
+String Calculator implements a function that sums all the numeric elements of a string, unless it is an empty string or a null value.
+
+
+## Cases
+
+- **0** -> 0
+- **null** -> 0
+- **'2'** -> 2
+- **'2,2'** -> 4
+- **'2,2,a'** -> 4
+- **'2,2a'** -> 4
+- **'//%/2%2'** -> 4
+
+## Run project
+Install project depencencies:
+
+`
+npm install
+`
+
+To run all test in watch mode, run next command:
+
+`
+npm run test:watch
+`
